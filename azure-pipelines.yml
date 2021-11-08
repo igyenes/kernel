@@ -36,7 +36,7 @@ stages:
       displayName: Build Allwinner H3 kernel
       inputs:
         targetType: 'inline'
-        script: 'cd $(Build.SourcesDirectory) && make kernel-h3-build'
+        script: 'cd $(Build.SourcesDirectory) && make kernel-s905gen3-build'
     - task: Bash@3
       displayName: Build Allwinner H5 kernel
       inputs:
@@ -62,11 +62,7 @@ stages:
       inputs:
         targetType: 'inline'
         script: 'make kernel-s922x-build'
-    - task: Bash@3
-      displayName: Build Amlogic SM1 (S905x3) kernel
-      inputs:
-        targetType: 'inline'
-        script: 'make kernel-sm1-build'
+
     - task: Bash@3
       displayName: Build Rockchip RK3288 kernel
       inputs:
